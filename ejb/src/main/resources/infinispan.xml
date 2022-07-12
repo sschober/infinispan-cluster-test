@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<infinispan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:infinispan:config:12.0 http://www.infinispan.org/schemas/infinispan-config-12.0.xsd" xmlns="urn:infinispan:config:12.0">
+
+  <jgroups>
+    <stack-file name="tcp-stack" path="jgroups.xml" />
+  </jgroups>
+
+  <cache-container name="ilf-cache-container" default-cache="default" statistics="false">
+
+    <transport cluster="DefaultCluster" stack="tcp-stack" />
+
+    <jmx domain="org.infinispan" />
+
+    <replicated-cache-configuration name="repl-cache" mode="SYNC" statistics="false" remote-timeout="15000">
+      <locking acquire-timeout="15000" isolation="REPEATABLE_READ" />
+
+      <transaction mode="FULL_XA" stop-timeout="1000" transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup" locking="OPTIMISTIC"/>
+        
+      <memory storage="HEAP" />
+      <encoding media-type="application/x-java-serialized-object" />
+    </replicated-cache-configuration>
+
+    <replicated-cache name="default" configuration="repl-cache" />
+
+  </cache-container>
+
+</infinispan>

@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.example.infinispan-test</groupId>
+  <artifactId>infinispan-cluster-test</artifactId>
+  <packaging>pom</packaging>
+  <version>1.2-inf13-generic</version>
+
+  <name>infinispan-cluster-test</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <infinispan.version>13.0.10.Final</infinispan.version>
+  </properties>
+
+  <modules>
+    <module>war</module>
+    <module>ejb</module>
+    <module>ear</module>
+  </modules>
+  
+</project>

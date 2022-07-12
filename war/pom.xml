@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example.infinispan-test</groupId>
+  <artifactId>infinispan-cluster-test-war</artifactId>
+  <packaging>war</packaging>
+  <parent>
+    <groupId>com.example.infinispan-test</groupId>
+    <artifactId>infinispan-cluster-test</artifactId>
+    <version>1.2-inf13-generic</version>
+  </parent>
+  <name>infinispan-cluster-test WAR</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.example.infinispan-test</groupId>
+      <artifactId>infinispan-cluster-test-ejb</artifactId>
+      <version>1.2-inf13-generic</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>7.0</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>infinispan-cluster-test-war</finalName>
+  </build>
+</project>
