@@ -24,7 +24,6 @@ import org.jboss.logging.Logger;
 public class CacheManager {
 
     private EmbeddedCacheManager cacheManager;
-    String hostName = "";
     DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
     private static final Logger LOG = Logger.getLogger(CacheManager.class);
 
@@ -43,8 +42,9 @@ public class CacheManager {
             cacheManager = new DefaultCacheManager(CacheManager.class.getResourceAsStream("/infinispan.xml"));
             long end = System.currentTimeMillis();
             LOG.info("DONE in " + (end - start) + "ms");
-            hostName = InetAddress.getLocalHost().getHostName();
-            
+            if(null == serverName){
+                serverName = InetAddress.getLocalHost().getHostName();
+            }
             refreshEntry(cacheManager.getCache(CACHE_NAME));
 
         } catch (IOException e) {
