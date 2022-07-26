@@ -8,7 +8,7 @@
   <parent>
     <groupId>com.example.infinispan-test</groupId>
     <artifactId>infinispan-cluster-test</artifactId>
-    <version>1.2-inf13-generic</version>
+    <version>1.0-inf11-generic</version>
   </parent>
   
   <name>infinispan-cluster-test EAR</name>
@@ -17,13 +17,13 @@
     <dependency>
       <groupId>com.example.infinispan-test</groupId>
       <artifactId>infinispan-cluster-test-war</artifactId>
-      <version>1.2-inf13-generic</version>
+      <version>1.0-inf11-generic</version>
       <type>war</type>
     </dependency>
     <dependency>
       <groupId>com.example.infinispan-test</groupId>
       <artifactId>infinispan-cluster-test-ejb</artifactId>
-      <version>1.2-inf13-generic</version>
+      <version>1.0-inf11-generic</version>
       <type>ejb</type>
     </dependency>
     <dependency>
@@ -44,6 +44,13 @@
       <plugin>
         <artifactId>maven-ear-plugin</artifactId>
         <version>3.2.0</version>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Dependencies>org.infinispan</Dependencies>
+            </manifestEntries>
+          </archive>
+        </configuration>
       </plugin>      
     </plugins>
   </build>

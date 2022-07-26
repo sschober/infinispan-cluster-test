@@ -4,7 +4,7 @@
   <groupId>com.example.infinispan-test</groupId>
   <artifactId>infinispan-cluster-test</artifactId>
   <packaging>pom</packaging>
-  <version>1.2-inf13-generic</version>
+  <version>1.0-inf11-generic</version>
 
   <name>infinispan-cluster-test</name>
 
@@ -12,7 +12,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <infinispan.version>13.0.10.Final</infinispan.version>
+    <infinispan.version>11.0.9.Final</infinispan.version>
   </properties>
 
   <modules>

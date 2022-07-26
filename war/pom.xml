@@ -6,7 +6,7 @@
   <parent>
     <groupId>com.example.infinispan-test</groupId>
     <artifactId>infinispan-cluster-test</artifactId>
-    <version>1.2-inf13-generic</version>
+    <version>1.0-inf11-generic</version>
   </parent>
   <name>infinispan-cluster-test WAR</name>
 
@@ -14,7 +14,7 @@
     <dependency>
       <groupId>com.example.infinispan-test</groupId>
       <artifactId>infinispan-cluster-test-ejb</artifactId>
-      <version>1.2-inf13-generic</version>
+      <version>1.0-inf11-generic</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
